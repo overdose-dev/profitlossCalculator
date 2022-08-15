@@ -1,0 +1,48 @@
+body {
+  background-image: url(images/77826.jpg);
+  letter-spacing: 1px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+nav {
+  background-color: #e8d0f0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+span {
+  margin: 30px;
+  font-size: small;
+  font-style: italic;
+}
+
+.container {
+  height: auto;
+  width: 300px;
+  background-color: #e8d0f0;
+  padding: 20px;
+  margin: 20vh;
+  border-radius: 7px;
+}
+
+h3 {
+  display: none;
+  text-align: center;
+  font-size: medium;
+  font-weight: 450;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+/* Another way of centralizing the container
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); */
