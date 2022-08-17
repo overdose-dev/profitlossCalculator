@@ -50,6 +50,31 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <script src="main.js"></script>
+    <script>
+      function Calculate() {
+        const costPrice = document.querySelector("#costPrice");
+        const sellPrice = document.querySelector("#sellingPrice");
+        const result = document.querySelector("#results");
+        const percentage = document.querySelector("#percentage");
+        const empty = document.querySelector("#empty");
+
+        result.innerHTML = "";
+        percentage.innerHTML = "";
+        empty.innerHTML = "";
+
+        const diff = sellPrice - costPrice;
+        if (diff > 0) {
+          const profit_percent = ((diff / costPrice) * 100).toFixed(2);
+          result.innerHTML = "Your profit is $ " + diff;
+          percentage.innerHTML = "Your profit is $ " + profit_percent;
+        } else if (diff < 0) {
+          const loss_percent = ((Math.abs(diff) / costPrice) * 100).toFixed(2);
+          result.innerHTML = "It is a Loss of: $ " + Math.abs(diff);
+          percentage.innerHTML = "Total Loss Percentage : " + loss_percent;
+        } else if (diff == 0) {
+          empty.innerHTML = "No Profit No Loss";
+        }
+      }
+    </script>
   </body>
 </html>
