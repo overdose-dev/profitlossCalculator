@@ -1,5 +1,77 @@
+const costPrice = document.querySelector("#costPrice");
+const sellPrice = document.querySelector("#sellingPrice");
+const result = document.querySelector("#results");
+const percentage = document.querySelector("#percentage");
+const empty = document.querySelector("#empty");
 
+function Calculate() {
+  const diff = sellPrice.value - costPrice.value;
+  if (!(costPrice.value === "" || sellPrice.value === "")) {
+    if (diff > 0) {
+      const profit_percent = ((diff / costPrice.value) * 100).toFixed(2);
+      result.innerHTML = "You made a profit of $" + diff;
+      percentage.innerHTML =
+        "Your Percentage Profit is " + profit_percent + "%";
+      empty.innerHTML = "";
+      costPrice.value = "";
+      sellPrice.value = "";
+    } else if (diff < 0) {
+      const loss_percent = ((diff / costPrice.value) * 100).toFixed(2);
+      result.innerHTML = "You experienced a loss of : $" + Math.abs(diff);
+      percentage.innerHTML =
+        "Your Percentage Loss is " + Math.abs(loss_percent) + "%";
+      empty.innerHTML = "";
+      costPrice.value = "";
+      sellPrice.value = "";
+    } else if (diff == 0) {
+      result.innerHTML = "";
+      percentage.innerHTML = "";
+      empty.innerHTML = "No Profit No Loss";
+    }
+    // location.reload();
+  }
+}
 
+//********************************** */
+//First Attempt
+// const costPrice = document.querySelector("#costPrice");
+// const sellPrice = document.querySelector("#sellingPrice");
+
+// const result = document.querySelector("#results");
+// const percentage = document.querySelector("#percentage");
+// const empty = document.querySelector("#empty");
+// function Calculate() {
+//   //   result.innerHTML = "";
+//   //   percentage.innerHTML = "";
+//   //   empty.innerHTML = "";
+
+//   const profit = sellPrice.value - costPrice.value;
+
+//   if (profit > 0) {
+//     const profit_percent = ((profit / costPrice) * 100).toFixed(2);
+//     result.innerHTML = "Profit : " + profit;
+//     percentage.innerHTML = "Profit Percentage : " + profit_percent;
+//   } else if (sellPrice === "" || isNaN(sellPrice) || sellPrice <= 0) {
+//     document.getElementById("cost_error").innerHTML =
+//       "Please provide a valid selling price.";
+//   } else if (profit < 0) {
+//     // const loss = cost - sell;
+//     const loss_percent = ((loss / costPrice) * 100).toFixed(2);
+
+//     result.innerHTML = "Loss : " + loss;
+//     percentage.innerHTML = "Loss Percentage : " + loss_percent;
+//   } else if (costPrice === "" || isNaN(costPrice) || costPrice <= 0) {
+//     document.getElementById("cost_error").innerHTML =
+//       "Please provide a valid cost price.";
+//   }
+
+//   if (sellPrice == costPrice) {
+//     empty.innerHTML = "No Profit No Loss";
+//   }
+// }
+
+//********************************** */
+//Second Attempt
 // let button = document.getElementById("calcBtn");
 
 // button.addEventListener("click", function (e) {
@@ -30,47 +102,8 @@
 // }
 // });
 
-//********************************** */
-//Second Attempt
-// function Calculate() {
-//   const cost = document.querySelector("#costPrice").value;
-//   const sell = document.querySelector("#sellingPrice").value;
-
-//   const result = document.querySelector("#results");
-//   const percentage = document.querySelector("#percentage");
-//   const empty = document.querySelector("#empty");
-
-//   result.innerHTML = "";
-//   percentage.innerHTML = "";
-//   empty.innerHTML = "";
-
-//   if (sell > cost) {
-//     const profit = sell - cost;
-//     const profit_percent = ((profit / cost) * 100).toFixed(2);
-
-//     result.innerHTML = "Profit : " + profit;
-//     percentage.innerHTML = "Profit Percentage : " + profit_percent;
-//   } else if (sell === "" || isNaN(sell) || sell <= 0) {
-//     document.getElementById("cost_error").innerHTML =
-//       "Please provide a valid selling price.";
-//   }
-
-//   if (cost > sell) {
-//     const loss = cost - sell;
-//     const loss_percent = ((loss / cost) * 100).toFixed(2);
-
-//     result.innerHTML = "Loss : " + loss;
-//     percentage.innerHTML = "Loss Percentage : " + loss_percent;
-//   } else if (cost === "" || isNaN(cost) || cost <= 0) {
-//     document.getElementById("cost_error").innerHTML =
-//       "Please provide a valid cost price.";
-//   }
-
-//   if (sell == cost) {
-//     empty.innerHTML = "No Profit No Loss";
-//   }
-// }
-
+//**********************************
+//Third Attempt
 // var calculator = document
 //   .getElementById("calcBtn")
 //   .addEventListener("click", profitNloss);
