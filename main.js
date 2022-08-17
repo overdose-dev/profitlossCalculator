@@ -15,6 +15,8 @@ function Calculate() {
       empty.innerHTML = "";
       costPrice.value = "";
       sellPrice.value = "";
+      result.style.color = "#00e600";
+      percentage.style.color = "#00e600";
     } else if (diff < 0) {
       const loss_percent = ((diff / costPrice.value) * 100).toFixed(2);
       result.innerHTML = "You experienced a loss of : $" + Math.abs(diff);
@@ -23,14 +25,17 @@ function Calculate() {
       empty.innerHTML = "";
       costPrice.value = "";
       sellPrice.value = "";
+      result.style.color = "#e75757";
+      percentage.style.color = "#e75757";
     } else if (diff == 0) {
       result.innerHTML = "";
       percentage.innerHTML = "";
       empty.innerHTML = "No Profit No Loss";
     }
-    // location.reload();
   }
 }
+
+//profit text should be in green while loss should be in red
 
 //********************************** */
 //First Attempt
