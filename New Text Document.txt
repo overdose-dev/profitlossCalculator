@@ -1,0 +1,29 @@
+// let button = document.getElementsByClassName("btn");
+
+// button.addEventListener("click", function (e) {
+//   const cost = parseInt(document.getElementById("costPrice").value);
+//   const sell = parseInt(document.getElementById("sellingPrice").value);
+//   const result = document.getElementById("results");
+//   let cost_status = false,
+//     selling_status = false;
+
+//   if (cost === "" || isNaN(cost) || cost <= 0) {
+//     document.getElementById("cost_error").innerHTML =
+//       "Please provide a valid cost price.";
+//   } else {
+//     document.getElementById("cost_error").innerHTML = "";
+//     cost_status = true;
+//   }
+
+//   if (sell === "" || isNaN(sell) || sell <= 0) {
+//     document.getElementById("selling_error").innerHTML =
+//       "Please provide a valid selling price.";
+//   } else {
+//     document.getElementById("selling_error").innerHTML = "";
+//     selling_status = true;
+//   }
+
+//   if (cost_status && selling_status) {
+//     const profitLoss =
+//   }
+// });
