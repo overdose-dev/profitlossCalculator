@@ -30,9 +30,9 @@ function Calculate() {
     } else if (diff == 0) {
       result.innerHTML = "";
       percentage.innerHTML = "";
+      empty.innerHTML = "No Profit No Loss";
       costPrice.value = "";
       sellPrice.value = "";
-      empty.innerHTML = "No Profit No Loss";
     }
   }
 }
