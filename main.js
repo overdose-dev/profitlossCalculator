@@ -30,13 +30,12 @@ function Calculate() {
     } else if (diff == 0) {
       result.innerHTML = "";
       percentage.innerHTML = "";
+      costPrice.value = "";
+      sellPrice.value = "";
       empty.innerHTML = "No Profit No Loss";
     }
   }
 }
-
-//profit text should be in green while loss should be in red
-//00e600
 
 //********************************** */
 //First Attempt
