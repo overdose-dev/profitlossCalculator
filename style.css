@@ -29,31 +29,29 @@ span {
   width: 300px;
   background-color: #e8d0f0;
   padding: 20px;
-  /* margin: 20vh; */
   border-radius: 7px;
 }
 
 h3 {
-  /* display: none; */
   text-align: center;
   font-size: medium;
   font-weight: 450;
 }
 
 #cost_error {
-  display: none;
-  text-align: center;
-  font-size: medium;
+  text-align: left;
+  font-size: 10px;
   font-weight: 450;
-  color: red;
+  margin-top: 0;
+  color: #e75757;
 }
 
 #selling_error {
-  display: none;
-  text-align: center;
-  font-size: medium;
+  text-align: left;
+  font-size: 10px;
   font-weight: 450;
-  color: red;
+  margin-top: 0;
+  color: #e75757;
 }
 
 footer {
